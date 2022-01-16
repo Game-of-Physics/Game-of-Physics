@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - Move
     - ShowBag
     - ShowMap
+    - StoryTrigger
     - SwitchScene
     Bolt.Core.Runtime.dll:
     - Bolt.VariablesAsset
@@ -113,13 +114,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3346}
     - Class: 114
-      Script: {instanceID: 4066}
+      Script: {instanceID: 3844}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 4068}
     - Class: 114
-      Script: {instanceID: 227064}
+      Script: {instanceID: 4236}
+    - Class: 114
+      Script: {instanceID: 118840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,15 +201,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3890}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4338}
+      Script: {instanceID: 4340}
     - Class: 114
-      Script: {instanceID: 4644}
+      Script: {instanceID: 4646}
     - Class: 114
-      Script: {instanceID: 5174}
+      Script: {instanceID: 5176}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -604,6 +607,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: dd6482d079698f2ca868c52e5d5910c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseRotate
   - hash:
       serializedVersion: 2
       Hash: a53651ee3996fbba20dfe0fce02f0b23
@@ -1326,10 +1335,10 @@ ScriptsOnlyBuild:
     className: AmbientOcclusion
   - hash:
       serializedVersion: 2
-      Hash: dd6482d079698f2ca868c52e5d5910c5
+      Hash: a2c90762c81f7bbff681d789cd71b8bc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MouseRotate
+    className: StoryTrigger
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartMenu.unity

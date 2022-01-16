@@ -48,6 +48,7 @@ public class Move : MonoBehaviour
         direc0.SetActive(true);
         direc0.transform.position = this.transform.position;
         direc.transform.rotation = Quaternion.Euler(0,-phi,-theta);
+        direc0.transform.localScale = new Vector3 (1f + force*0.125f, 1f + force*0.125f, 1f + force*0.125f);
     }
     
     void Start()
@@ -76,6 +77,16 @@ public class Move : MonoBehaviour
         }
         if (Input.GetKey(m_leftkey)) {
             phi = phi - Time.deltaTime*100;
+            flag0 = 1;
+        }
+        if (Input.GetKey(KeyCode.I)) {
+            force = force + Time.deltaTime*20;
+            force = Mathf.Min(force, 10);
+            flag0 = 1;
+        }
+        if (Input.GetKey(KeyCode.J)) {
+            force = force - Time.deltaTime*20;
+            force = Mathf.Max(force, 0);
             flag0 = 1;
         }
         if (flag0 == 1 || (Input.GetKey(KeyCode.Space))) {

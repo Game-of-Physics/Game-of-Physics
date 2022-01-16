@@ -36,19 +36,21 @@ public class MouseRotate : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (m_axes == RotationAxes.MouseXAndY) {
-            float m_rotationX = transform.localEulerAngles.y + Input.GetAxis ("Mouse X") * m_sensitivityX;
-            m_rotationY += Input.GetAxis ("Mouse Y") * m_sensitivityY;
-            m_rotationY = Mathf.Clamp (m_rotationY, m_minimumY, m_maximumY);
+        if (Input.GetMouseButton(0)) {
+            if (m_axes == RotationAxes.MouseXAndY) {
+                float m_rotationX = transform.localEulerAngles.y + Input.GetAxis ("Mouse X") * m_sensitivityX;
+                m_rotationY += Input.GetAxis ("Mouse Y") * m_sensitivityY;
+                m_rotationY = Mathf.Clamp (m_rotationY, m_minimumY, m_maximumY);
 
-            transform.localEulerAngles = new Vector3 (-m_rotationY, m_rotationX, 0);
-        } else if (m_axes == RotationAxes.MouseX) {
-            transform.Rotate (0, Input.GetAxis ("Mouse X") * m_sensitivityX, 0);
-        } else {
-            m_rotationY += Input.GetAxis ("Mouse Y") * m_sensitivityY;
-            m_rotationY = Mathf.Clamp (m_rotationY, m_minimumY, m_maximumY);
+                transform.localEulerAngles = new Vector3 (-m_rotationY, m_rotationX, 0);
+            } else if (m_axes == RotationAxes.MouseX) {
+                transform.Rotate (0, Input.GetAxis ("Mouse X") * m_sensitivityX, 0);
+            } else {
+                m_rotationY += Input.GetAxis ("Mouse Y") * m_sensitivityY;
+                m_rotationY = Mathf.Clamp (m_rotationY, m_minimumY, m_maximumY);
 
-            transform.localEulerAngles = new Vector3 (-m_rotationY, transform.localEulerAngles.y, 0);
+                transform.localEulerAngles = new Vector3 (-m_rotationY, transform.localEulerAngles.y, 0);
+            }
         }
     }
 }
